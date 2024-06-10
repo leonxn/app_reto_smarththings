@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:reto_smarththings/constans/constans.dart';
 import 'package:reto_smarththings/widgets/container_button.dart';
 import 'package:reto_smarththings/widgets/container_appbar.dart';
+import 'package:reto_smarththings/models/espacios_model.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -9,6 +10,16 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  List<EspaciosModel> espaciosList = [
+    EspaciosModel(nombre: "A"),
+    EspaciosModel(nombre: "B"),
+    EspaciosModel(nombre: "C"),
+    EspaciosModel(nombre: "D"),
+    EspaciosModel(nombre: "E"),
+    EspaciosModel(nombre: "F"),
+    EspaciosModel(nombre: "G"),
+    EspaciosModel(nombre: "H"),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,11 +42,11 @@ class _HomeScreenState extends State<HomeScreen> {
           SizedBox(
             height: 200,
             child: ListView.builder(
-              itemCount: 10,
+              itemCount: espaciosList.length,
               scrollDirection: Axis.horizontal,
               itemBuilder: (BuildContext context, int index) {
                 return ContainerButton(
-                  containtText: "A",
+                  containtText: espaciosList[index].nombre,
                   isIcon: false,
                 );
               },
