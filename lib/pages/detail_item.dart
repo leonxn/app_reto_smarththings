@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:reto_smarththings/constans/constans.dart';
 import 'package:reto_smarththings/widgets/container_appbar.dart';
@@ -107,8 +109,20 @@ class _DetailItemState extends State<DetailItem> {
                               onPressed: () {
                                 if (widget.equipoList[index].statusEquipo ==
                                     true) {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(
+                                        content: Text("Equipo Encendido"),
+                                        backgroundColor: Colors.green,
+                                        duration: Duration(seconds: 3)),
+                                  );
                                   widget.equipoList[index].statusEquipo = false;
                                 } else {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(
+                                        content: Text("Equipo Apagado"),
+                                        backgroundColor: Colors.red,
+                                        duration: Duration(seconds: 3)),
+                                  );
                                   widget.equipoList[index].statusEquipo = true;
                                 }
                                 setState(() {});
