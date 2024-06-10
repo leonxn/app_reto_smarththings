@@ -111,17 +111,27 @@ class _DetailItemState extends State<DetailItem> {
                                     true) {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     SnackBar(
-                                        content: Text("Equipo Encendido"),
+                                        content: Text(
+                                          "Equipo Encendido",
+                                          style: TextStyle(
+                                            fontSize: 20,
+                                          ),
+                                        ),
                                         backgroundColor: Colors.green,
-                                        duration: Duration(seconds: 3)),
+                                        duration: Duration(milliseconds: 500)),
                                   );
                                   widget.equipoList[index].statusEquipo = false;
                                 } else {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     SnackBar(
-                                        content: Text("Equipo Apagado"),
+                                        content: Text(
+                                          "Equipo Apagado",
+                                          style: TextStyle(
+                                            fontSize: 20,
+                                          ),
+                                        ),
                                         backgroundColor: Colors.red,
-                                        duration: Duration(seconds: 3)),
+                                        duration: Duration(milliseconds: 500)),
                                   );
                                   widget.equipoList[index].statusEquipo = true;
                                 }
