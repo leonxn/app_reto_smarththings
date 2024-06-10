@@ -18,43 +18,19 @@ class ContainerButton extends StatelessWidget {
 
   List<EquipoModel> equipoList = [
     EquipoModel(
-      nombre: 'Tva',
+      nombre: 'Tv 01',
       modelo: 'QNED80',
       mac: '00:1B:44:11:3A:B7',
       tipo: 1,
     ),
     EquipoModel(
-      nombre: 'Tvd',
+      nombre: 'Tv  02',
       modelo: 'QNED80',
       mac: '00:1B:44:11:3A:B7',
       tipo: 1,
     ),
     EquipoModel(
-      nombre: 'Tv',
-      modelo: 'QNED80',
-      mac: '00:1B:44:11:3A:B7',
-      tipo: 1,
-    ),
-    EquipoModel(
-      nombre: 'Tv',
-      modelo: 'QNED80',
-      mac: '00:1B:44:11:3A:B7',
-      tipo: 1,
-    ),
-    EquipoModel(
-      nombre: 'Tv',
-      modelo: 'QNED80',
-      mac: '00:1B:44:11:3A:B7',
-      tipo: 1,
-    ),
-    EquipoModel(
-      nombre: 'Tv',
-      modelo: 'QNED80',
-      mac: '00:1B:44:11:3A:B7',
-      tipo: 1,
-    ),
-    EquipoModel(
-      nombre: 'Tv',
+      nombre: 'Tv  03',
       modelo: 'QNED80',
       mac: '00:1B:44:11:3A:B7',
       tipo: 1,

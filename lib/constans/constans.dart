@@ -7,3 +7,8 @@ final TextStyle subtitle = TextStyle(
   fontSize: 25,
   fontWeight: FontWeight.bold,
 );
+
+final TextStyle subtitle2 = TextStyle(
+  color: Colors.black,
+  fontSize: 25,
+);
