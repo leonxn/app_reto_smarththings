@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:reto_smarththings/constans/constans.dart';
 import 'package:reto_smarththings/widgets/container_button.dart';
+import 'package:reto_smarththings/widgets/container_appbar.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -13,29 +14,11 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       body: Column(
         children: [
-          Container(
-            alignment: Alignment.center,
-            width: MediaQuery.of(context).size.width,
-            height: 70,
-            decoration: BoxDecoration(
-              color: Color(0xff054a88),
-              borderRadius: BorderRadius.only(
-                bottomRight: Radius.circular(10),
-                bottomLeft: Radius.circular(10),
-              ),
-            ),
-            child: Text(
-              "Navicury",
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 25,
-              ),
-            ),
-          ),
+          ContainerAppbar(),
           Padding(
             padding: const EdgeInsets.only(
               left: 14.0,
-              top: 20.0,
+              top: 50.0,
             ),
             child: Align(
               alignment: Alignment.centerLeft,
@@ -79,21 +62,25 @@ class _HomeScreenState extends State<HomeScreen> {
                   containtIcon: Icons.live_tv_outlined,
                   containtText: "Tv Cuarto",
                   isIcon: true,
+                  tipoEquipo: 1,
                 ),
                 ContainerButton(
                   containtIcon: Icons.kitchen_outlined,
                   containtText: "Refrigeradora",
                   isIcon: true,
+                  tipoEquipo: 2,
                 ),
                 ContainerButton(
                   containtIcon: Icons.door_front_door_outlined,
                   containtText: "Puerta Sara",
                   isIcon: true,
+                  tipoEquipo: 3,
                 ),
                 ContainerButton(
                   containtIcon: Icons.directions_car,
                   containtText: "Cochera",
                   isIcon: true,
+                  tipoEquipo: 4,
                 ),
               ],
             ),
