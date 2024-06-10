@@ -18,27 +18,63 @@ class ContainerButton extends StatelessWidget {
 
   List<EquipoModel> equipoList = [
     EquipoModel(
-      nombre: 'Refrigeradora',
-      modelo: 'modelo',
-      mac: 'modelo',
+      nombre: 'Tva',
+      modelo: 'QNED80',
+      mac: '00:1B:44:11:3A:B7',
       tipo: 1,
     ),
     EquipoModel(
-      nombre: 'TV',
-      modelo: 'modelo',
-      mac: 'modelo',
+      nombre: 'Tvd',
+      modelo: 'QNED80',
+      mac: '00:1B:44:11:3A:B7',
+      tipo: 1,
+    ),
+    EquipoModel(
+      nombre: 'Tv',
+      modelo: 'QNED80',
+      mac: '00:1B:44:11:3A:B7',
+      tipo: 1,
+    ),
+    EquipoModel(
+      nombre: 'Tv',
+      modelo: 'QNED80',
+      mac: '00:1B:44:11:3A:B7',
+      tipo: 1,
+    ),
+    EquipoModel(
+      nombre: 'Tv',
+      modelo: 'QNED80',
+      mac: '00:1B:44:11:3A:B7',
+      tipo: 1,
+    ),
+    EquipoModel(
+      nombre: 'Tv',
+      modelo: 'QNED80',
+      mac: '00:1B:44:11:3A:B7',
+      tipo: 1,
+    ),
+    EquipoModel(
+      nombre: 'Tv',
+      modelo: 'QNED80',
+      mac: '00:1B:44:11:3A:B7',
+      tipo: 1,
+    ),
+    EquipoModel(
+      nombre: 'Refrigeradora',
+      modelo: 'QNED90',
+      mac: '00:AA:BB:CC:DD:EE',
       tipo: 2,
     ),
     EquipoModel(
       nombre: 'Puerta',
-      modelo: 'modelo',
-      mac: 'modelo',
+      modelo: 'QNED10',
+      mac: '00:11:22:33:44:55',
       tipo: 3,
     ),
     EquipoModel(
       nombre: 'Cochera',
-      modelo: 'modelo',
-      mac: 'modelo',
+      modelo: 'QNED20',
+      mac: '00:1A:2B:3C:4D:5E',
       tipo: 4,
     ),
   ];
