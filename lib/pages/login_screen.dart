@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:reto_smarththings/pages/home_screen.dart';
 
-class LoginScreen extends StatelessWidget {
+class LoginScreen extends StatefulWidget {
+  @override
+  State<LoginScreen> createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
+  bool initSession = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,9 +44,12 @@ class LoginScreen extends StatelessWidget {
                   child: Icon(
                     Icons.fingerprint,
                     size: 200,
-                    color: Colors.white,
+                    color: initSession ? Colors.green : Colors.white,
                   ),
                   onTap: () {
+                    setState(() {
+                      initSession = true;
+                    });
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => HomeScreen()),

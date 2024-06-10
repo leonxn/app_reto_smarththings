@@ -5,9 +5,10 @@ class ContainerAppbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: EdgeInsets.only(top: 25),
       alignment: Alignment.center,
       width: MediaQuery.of(context).size.width,
-      height: 70,
+      height: 85,
       decoration: BoxDecoration(
         color: colorPrincipal,
         borderRadius: BorderRadius.only(
