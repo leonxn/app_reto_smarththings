@@ -22,36 +22,42 @@ class ContainerButton extends StatelessWidget {
       modelo: 'QNED80',
       mac: '00:1B:44:11:3A:B7',
       tipo: 1,
+      statusEquipo: false,
     ),
     EquipoModel(
       nombre: 'Tv  02',
       modelo: 'QNED80',
       mac: '00:1B:44:11:3A:B7',
       tipo: 1,
+      statusEquipo: false,
     ),
     EquipoModel(
       nombre: 'Tv  03',
       modelo: 'QNED80',
       mac: '00:1B:44:11:3A:B7',
       tipo: 1,
+      statusEquipo: false,
     ),
     EquipoModel(
       nombre: 'Refrigeradora',
       modelo: 'QNED90',
       mac: '00:AA:BB:CC:DD:EE',
       tipo: 2,
+      statusEquipo: false,
     ),
     EquipoModel(
       nombre: 'Puerta',
       modelo: 'QNED10',
       mac: '00:11:22:33:44:55',
       tipo: 3,
+      statusEquipo: false,
     ),
     EquipoModel(
       nombre: 'Cochera',
       modelo: 'QNED20',
       mac: '00:1A:2B:3C:4D:5E',
       tipo: 4,
+      statusEquipo: false,
     ),
   ];
   @override

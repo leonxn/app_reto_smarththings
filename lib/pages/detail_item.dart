@@ -3,21 +3,26 @@ import 'package:reto_smarththings/constans/constans.dart';
 import 'package:reto_smarththings/widgets/container_appbar.dart';
 import 'package:reto_smarththings/models/equipo_model.dart';
 
-class DetailItem extends StatelessWidget {
+class DetailItem extends StatefulWidget {
   List<EquipoModel> equipoList; // Parámetro para recibir la lista
 
   DetailItem({required this.equipoList});
 
   @override
+  State<DetailItem> createState() => _DetailItemState();
+}
+
+class _DetailItemState extends State<DetailItem> {
+  @override
   Widget build(BuildContext context) {
-    print(equipoList.length);
+    print(widget.equipoList.length);
     return Scaffold(
       body: Column(
         children: [
           ContainerAppbar(),
           Expanded(
             child: ListView.builder(
-              itemCount: equipoList.length,
+              itemCount: widget.equipoList.length,
               scrollDirection: Axis.vertical,
               itemBuilder: (BuildContext context, int index) {
                 return Padding(
@@ -50,7 +55,7 @@ class DetailItem extends StatelessWidget {
                                 style: subtitle2,
                               ),
                               Text(
-                                equipoList[index].nombre,
+                                widget.equipoList[index].nombre,
                                 style: subtitle,
                               ),
                             ],
@@ -63,7 +68,7 @@ class DetailItem extends StatelessWidget {
                                 style: subtitle2,
                               ),
                               Text(
-                                equipoList[index].modelo,
+                                widget.equipoList[index].modelo,
                                 style: subtitle,
                               ),
                             ],
@@ -76,7 +81,7 @@ class DetailItem extends StatelessWidget {
                                 style: subtitle2,
                               ),
                               Text(
-                                equipoList[index].mac,
+                                widget.equipoList[index].mac,
                                 style: subtitle,
                               ),
                             ],
@@ -91,13 +96,27 @@ class DetailItem extends StatelessWidget {
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(10.0),
                                 side: BorderSide(
-                                  color: Color(0xff054a88),
+                                  color:
+                                      widget.equipoList[index].statusEquipo ==
+                                              false
+                                          ? Color(0xff054a88)
+                                          : Colors.red,
                                   width: 2.0,
                                 ),
                               ),
-                              onPressed: () {},
+                              onPressed: () {
+                                if (widget.equipoList[index].statusEquipo ==
+                                    true) {
+                                  widget.equipoList[index].statusEquipo = false;
+                                } else {
+                                  widget.equipoList[index].statusEquipo = true;
+                                }
+                                setState(() {});
+                              },
                               child: Text(
-                                "Encender",
+                                widget.equipoList[index].statusEquipo == false
+                                    ? "Encender"
+                                    : "Apagar",
                                 style: subtitle,
                               ),
                             ),
