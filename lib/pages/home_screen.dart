@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:reto_smarththings/constans/constans.dart';
 import 'package:reto_smarththings/widgets/container_button.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -35,17 +35,13 @@ class _HomeScreenState extends State<HomeScreen> {
           Padding(
             padding: const EdgeInsets.only(
               left: 14.0,
-              top: 12.0,
+              top: 20.0,
             ),
             child: Align(
               alignment: Alignment.centerLeft,
               child: Text(
                 "Espacios",
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
-                ),
+                style: subtitle,
               ),
             ),
           ),
@@ -65,23 +61,19 @@ class _HomeScreenState extends State<HomeScreen> {
           Padding(
             padding: const EdgeInsets.only(
               left: 14.0,
-              top: 12.0,
+              top: 20.0,
             ),
             child: Align(
               alignment: Alignment.centerLeft,
               child: Text(
                 "Equipos Conectados",
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold,
-                ),
+                style: subtitle,
               ),
             ),
           ),
           Expanded(
             child: GridView.count(
-              crossAxisCount: 2, // Número de columnas
+              crossAxisCount: 2,
               children: [
                 ContainerButton(
                   containtIcon: Icons.live_tv_outlined,
