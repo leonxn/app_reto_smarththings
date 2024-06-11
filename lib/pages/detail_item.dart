@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:reto_smarththings/constans/constans.dart';
 import 'package:reto_smarththings/widgets/container_appbar.dart';
 import 'package:reto_smarththings/models/equipo_model.dart';
+import 'package:reto_smarththings/widgets/text_detail_item.dart';
 
 class DetailItem extends StatefulWidget {
   List<EquipoModel> equipoList; // Parámetro para recibir la lista
@@ -49,45 +50,15 @@ class _DetailItemState extends State<DetailItem> {
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                "Fabricante:",
-                                style: subtitle2,
-                              ),
-                              Text(
-                                widget.equipoList[index].nombre,
-                                style: subtitle,
-                              ),
-                            ],
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                "Modelo:",
-                                style: subtitle2,
-                              ),
-                              Text(
-                                widget.equipoList[index].modelo,
-                                style: subtitle,
-                              ),
-                            ],
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                "Mac:",
-                                style: subtitle2,
-                              ),
-                              Text(
-                                widget.equipoList[index].mac,
-                                style: subtitle,
-                              ),
-                            ],
-                          ),
+                          TextDetailItem(
+                              opcion: "Fabricante",
+                              optValue: widget.equipoList[index].nombre),
+                          TextDetailItem(
+                              opcion: "Modelo",
+                              optValue: widget.equipoList[index].modelo),
+                          TextDetailItem(
+                              opcion: "Mac",
+                              optValue: widget.equipoList[index].mac),
                           SizedBox(
                             height: 20,
                           ),
@@ -111,27 +82,29 @@ class _DetailItemState extends State<DetailItem> {
                                     true) {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     SnackBar(
-                                        content: Text(
-                                          "Equipo Encendido",
-                                          style: TextStyle(
-                                            fontSize: 20,
-                                          ),
+                                      content: Text(
+                                        "Equipo Encendido",
+                                        style: TextStyle(
+                                          fontSize: 20,
                                         ),
-                                        backgroundColor: Colors.green,
-                                        duration: Duration(milliseconds: 500)),
+                                      ),
+                                      backgroundColor: Colors.green,
+                                      duration: Duration(milliseconds: 500),
+                                    ),
                                   );
                                   widget.equipoList[index].statusEquipo = false;
                                 } else {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     SnackBar(
-                                        content: Text(
-                                          "Equipo Apagado",
-                                          style: TextStyle(
-                                            fontSize: 20,
-                                          ),
+                                      content: Text(
+                                        "Equipo Apagado",
+                                        style: TextStyle(
+                                          fontSize: 20,
                                         ),
-                                        backgroundColor: Colors.red,
-                                        duration: Duration(milliseconds: 500)),
+                                      ),
+                                      backgroundColor: Colors.red,
+                                      duration: Duration(milliseconds: 500),
+                                    ),
                                   );
                                   widget.equipoList[index].statusEquipo = true;
                                 }
