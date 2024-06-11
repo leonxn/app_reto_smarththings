@@ -16,6 +16,22 @@ class DetailItem extends StatefulWidget {
 }
 
 class _DetailItemState extends State<DetailItem> {
+  void _snackbar(
+      BuildContext context, String textNotificacion, Color? colorNotificacion) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(
+          textNotificacion,
+          style: TextStyle(
+            fontSize: 20,
+          ),
+        ),
+        backgroundColor: colorNotificacion,
+        duration: Duration(milliseconds: 500),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     print(widget.equipoList.length);
@@ -80,32 +96,12 @@ class _DetailItemState extends State<DetailItem> {
                               onPressed: () {
                                 if (widget.equipoList[index].statusEquipo ==
                                     true) {
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                    SnackBar(
-                                      content: Text(
-                                        "Equipo Encendido",
-                                        style: TextStyle(
-                                          fontSize: 20,
-                                        ),
-                                      ),
-                                      backgroundColor: Colors.green,
-                                      duration: Duration(milliseconds: 500),
-                                    ),
-                                  );
+                                  _snackbar(context, "Equipo Encendido",
+                                      Colors.green);
                                   widget.equipoList[index].statusEquipo = false;
                                 } else {
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                    SnackBar(
-                                      content: Text(
-                                        "Equipo Apagado",
-                                        style: TextStyle(
-                                          fontSize: 20,
-                                        ),
-                                      ),
-                                      backgroundColor: Colors.red,
-                                      duration: Duration(milliseconds: 500),
-                                    ),
-                                  );
+                                  _snackbar(
+                                      context, "Equipo Apagado", Colors.red);
                                   widget.equipoList[index].statusEquipo = true;
                                 }
                                 setState(() {});
